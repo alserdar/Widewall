@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@mipmap/male"
+            android:title="@string/profile"
+            android:background="@color/ourBlack" />
+        <item
+            android:id="@+id/nav_favourite"
+            android:icon="@mipmap/full_fav"
+            android:title="@string/favorite"
+            android:background="@color/ourBlack" />
+
+        <item
+            android:id="@+id/nav_blocked"
+            android:icon="@mipmap/block"
+            android:title="@string/block_list"
+            android:background="@color/ourBlack" />
+
+
+        <item
+        android:id="@+id/nav_location"
+        android:icon="@mipmap/location"
+        android:title="@string/location"
+        android:background="@color/ourBlack"
+            android:visible="false"/>
+
+
+        <item
+            android:id="@+id/nav_search"
+            android:icon="@mipmap/search"
+            android:title="@string/search"
+            android:background="@color/ourBlack" />
+
+        <item
+            android:id="@+id/nav_volcano"
+            android:icon="@mipmap/volcano"
+            android:title="@string/volcano"
+            android:background="@color/ourBlack"
+            android:visible="false"/>
+
+    </group>
+
+    <item android:title="@string/communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_ads"
+                android:icon="@mipmap/ads"
+                android:title="@string/ads"
+                android:background="@color/ourBlack"
+                android:visible="false"/>
+            <item
+                android:id="@+id/nav_contact_us"
+                android:icon="@mipmap/dm"
+                android:title="@string/contact_us"
+                android:background="@color/ourBlack" />
+        </menu>
+    </item>
+
+    <item android:title="@string/settings">
+        <menu>
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@mipmap/settings"
+                android:title="@string/settings"
+                android:background="@color/ourBlack"
+                android:visible="false"/>
+            <item
+                android:id="@+id/nav_information"
+                android:icon="@mipmap/information"
+                android:title="@string/information"
+                android:background="@color/ourBlack"
+                android:visible="false"/>
+
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@mipmap/shut_down"
+                android:title="@string/logout"
+                android:background="@color/ourBlack"/>
+        </menu>
+    </item>
+
+</menu>

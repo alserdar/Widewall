@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="alserdar.widewall">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/wide_wall"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/wide_wall"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Launcher"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"
+            tools:replace="android:value" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".login_package.LoginWith" />
+        <activity android:name=".login_package.ContinueWithGoogle" />
+        <activity android:name=".login_package.ContinueWithFacebook" />
+        <activity
+            android:name=".login_package.NewUser"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Home"
+            android:label=""
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".login_package.GetCountryBySimCard"
+            android:noHistory="true" />
+
+        <receiver
+            android:name=".check_internet.CheckInternet"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".nav_stuff.BottomNav"
+            android:label="@string/title_activity_bottom_nav" />
+        <activity android:name=".fragment_home_stuff.Planet" />
+        <activity
+            android:name=".nav_stuff.MyProfile"
+            android:label="@string/title_activity_user_profile_informaion"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".post_stuff.ReplayThePost"
+            android:windowSoftInputMode="adjustResize|stateVisible" />
+        <activity
+            android:name=".post_stuff.ThePost"
+            android:windowSoftInputMode="adjustPan|stateVisible" />
+        <activity
+            android:name=".nav_stuff.MyProfileSettings"
+            android:windowSoftInputMode="adjustPan|stateVisible"></activity>
+        <activity android:name=".nav_stuff.FavouriteList" />
+        <activity
+            android:name=".nav_stuff.Search"
+            android:windowSoftInputMode="adjustPan|stateVisible" />
+        <activity android:name=".nav_stuff.Location" />
+        <activity android:name=".fragment_home_stuff.RoomCountry" />
+        <activity android:name=".fragment_home_stuff.IslandRoom" />
+        <activity
+            android:name=".user_stuff.UserProfile"
+            android:label="@string/title_activity_user_profile"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".nav_stuff.BlockList" />
+        <activity
+            android:name=".nav_stuff.Volcano"
+            android:label="@string/title_activity_volcano"
+            android:theme="@style/AppTheme" />
+
+        <service
+            android:name=".firebase_messages.MyFirebaseMessagingService"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".fragment_messages_stuff.PrivateChat" />
+
+        <service android:name=".fcm_service_notification.FCMService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".fcm_service_notification.FirebaseBackgroundServiceForMessages"
+            android:exported="false"
+            android:process=":remote"
+            android:isolatedProcess="true">
+            <intent-filter>
+                <action android:name=".FirebaseBackgroundService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".fcm_service_notification.FirebaseBackgroundServiceForNotifications"
+            android:exported="false"
+            android:process=":remote"
+            android:isolatedProcess="true">
+            <intent-filter>
+                <action android:name=".FirebaseBackgroundService" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".fcm_service_notification.StartFirebaseAtBoot"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="com.soundcloud.android.crop.CropImageActivity" />
+        <activity
+            android:name=".fragment_home_stuff.UploadThePostPleaseForPlanet"
+            android:windowSoftInputMode="adjustResize|stateVisible" />
+        <activity
+            android:name=".fragment_home_stuff.UploadThePostPleaseForCountry"
+            android:windowSoftInputMode="adjustResize|stateVisible" />
+        <activity
+            android:name=".one_shot_tutorial.TutorialOneShot"
+            android:label="@string/title_activity_tutorial_one_shot"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".login_package.TermsAndConditions"
+            android:noHistory="true" />
+        <activity android:name=".login_package.BaseActivity" />
+        <activity android:name=".post_stuff.ReplayThePostFromRoomCountry" />
+        <activity android:name=".fragment_home_stuff.UploadThePostPleaseForCountryTestThePictureUpload" />
+        <activity android:name=".load_package.LoadPicFullScreenIPrivateChat"></activity>
+        <activity android:name=".load_package.LoadPicFullScreenInRooms"></activity>
+    </application>
+
+</manifest>

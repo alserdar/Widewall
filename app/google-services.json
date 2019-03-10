@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "409381180533",
+    "firebase_url": "https://widewall-36774.firebaseio.com",
+    "project_id": "widewall-36774",
+    "storage_bucket": "widewall-36774.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:409381180533:android:1e5c14aa697a0c86",
+        "android_client_info": {
+          "package_name": "alserdar.widewall"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "409381180533-damoe8h5ao9cmppaandit0jd3ivrrgkk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "alserdar.widewall",
+            "certificate_hash": "87f7e6266e58ded624dccbeeb3ab292664a9941e"
+          }
+        },
+        {
+          "client_id": "409381180533-bjqmk4chb6hpcsc4s29o3la35db99cvh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCda8kBiFB-NdZKJ8ocuPGYaP_cBvHaMh0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "409381180533-bjqmk4chb6hpcsc4s29o3la35db99cvh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

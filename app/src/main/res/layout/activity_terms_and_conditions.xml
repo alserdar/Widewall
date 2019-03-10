@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login_package.TermsAndConditions"
+    android:weightSum="10"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/ourWhite"
+    android:padding="30dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|start"
+            android:text="This is the WideWall Terms and Conditions constitutes an Agreement and it is established between WideWall and the entity or person willing to use and accessing the Service WideWall and/or its affiliates provides to be a subject of subject to the following Terms. Please review it carefully. By accepting these Terms and Conditions you confirm to sign in/up with Google Account , you confirm you have read, understood and accepted its contents.
+
+Please also review our Privacy Policy, which is part of these Terms and can be viewed at WideWallonline.wordpress.com The Privacy Policy describes how we collect and handle any information gathered from users of the Services. By accessing or using the Service, including browsing the site, you accept the Agreement and expressly consent to the collection, use, storage, processing, and disclosure of your information in accordance with our Privacy Policy."/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoLink="web"
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/terms"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/i_agree_widewall_terms_and_conditions"
+            android:id="@+id/checkTerms"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            tools:ignore="NestedWeights">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel"
+                android:id="@+id/cancelTerms"
+                android:background="@drawable/button"
+                android:textColor="@color/ourWhite"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ok"
+                android:id="@+id/okTerms"
+                android:background="@drawable/button"
+                android:textColor="@color/ourWhite"
+                android:drawableEnd="@drawable/googleg_standard_color_18"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
